@@ -1,0 +1,296 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #f6f7fc;
+  color: #20243a;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+  padding: 65px 0 30px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.eyebrow {
+  color: #6759d9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 15px 0;
+}
+
+h1 span {
+  color: #6759d9;
+}
+
+.heading > p:not(.eyebrow) {
+  color: #777d91;
+  font-size: 14px;
+}
+
+.billing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #888da0;
+}
+
+.billing .active {
+  color: #24283c;
+  font-weight: 700;
+}
+
+.toggle {
+  width: 48px;
+  height: 26px;
+  padding: 3px;
+  border: 0;
+  border-radius: 20px;
+  background: #6759d9;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.toggle[aria-checked="true"] span {
+  transform: translateX(22px);
+}
+
+.save {
+  background: #e5f7ed;
+  color: #208957;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 18px;
+  padding: 30px 25px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(48, 43, 100, 0.12);
+}
+
+.popular {
+  border: 2px solid #6759d9;
+}
+
+.plan-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #efedff;
+  color: #6759d9;
+  font-size: 24px;
+}
+
+.card h2 {
+  font-size: 19px;
+  margin: 22px 0 8px;
+}
+
+.description {
+  min-height: 35px;
+  color: #85899b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  margin-top: 24px;
+}
+
+.currency {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.amount {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.period {
+  color: #85899b;
+  font-size: 11px;
+}
+
+.billing-note {
+  min-height: 15px;
+  color: #85899b;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.plan-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #3b3d54;
+  background: #f0f1f8;
+  padding: 13px;
+  border-radius: 9px;
+  margin: 23px 0;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.plan-button:hover {
+  transform: scale(1.02);
+  background: #e5e6f2;
+}
+
+.plan-button.primary {
+  color: white;
+  background: #6759d9;
+}
+
+.plan-button.primary:hover {
+  background: #5244c1;
+}
+
+.card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card li {
+  font-size: 12px;
+  color: #646a80;
+  margin: 17px 0;
+}
+
+.ribbon {
+  position: absolute;
+  top: 17px;
+  right: -31px;
+  width: 120px;
+  text-align: center;
+  padding: 7px 0;
+  transform: rotate(35deg);
+  background: #6759d9;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.value-ribbon {
+  background: #159b70;
+}
+
+.footnote {
+  text-align: center;
+  margin: 28px 0;
+  color: #898da0;
+  font-size: 11px;
+}
+
+footer {
+  text-align: center;
+  color: #777d91;
+  font-size: 12px;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #6759d9;
+}
+
+.copyright {
+  font-size: 10px;
+  color: #a0a3b1;
+}
+
+@media (max-width: 850px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding-top: 40px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:last-child {
+    grid-column: auto;
+  }
+
+  .card {
+    padding: 26px 22px;
+  }
+
+  .billing {
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
